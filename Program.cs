@@ -14,8 +14,13 @@ namespace criancaEducada
             Console.WriteLine("Vamos lá, digite alguma frase.");
             Console.ForegroundColor=ConsoleColor.White;
             string frase = Console.ReadLine();
+            frase = frase.ToLower()
+                  .Replace("chato", "#@$%*!&")
+                  .Replace("chata", "#@$%*!&")
+                  .Replace("bobo", "#@$%*!&")
+                  .Replace("boba", "#@$%*!&"); 
             Console.ForegroundColor=ConsoleColor.DarkMagenta;
-            Console.WriteLine(frase=frase.Replace("a","@").Replace("e","&").Replace("i","1").Replace("o","#").Replace("u","*"));
+            Console.WriteLine(frase.Replace("a","@").Replace("e","&").Replace("i","1").Replace("o","#").Replace("u","*"));
             Console.ResetColor();
             
      }
